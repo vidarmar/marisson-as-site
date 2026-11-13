@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Marisson — Aero &amp; Digital</title>
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="description" content="Independent aviation IT consulting: weight and balance, load sheet and DCS integration, EFB compliance, and development of training applications.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,23 +28,19 @@
   .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 
   /* Header */
-  .topbar{background:#070d18;border-bottom:1px solid var(--line-soft);font-family:var(--mono);font-size:11.5px;color:var(--dim);letter-spacing:.04em}
+  .topbar{background:#000;border-bottom:1px solid var(--line-soft);font-family:var(--mono);font-size:11.5px;color:var(--dim);letter-spacing:.04em}
   .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:36px;gap:16px}
   .topbar .tb-left,.topbar .tb-right{display:flex;gap:22px;align-items:center}
   .topbar a:hover{color:var(--accent)}
   .topbar .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--ok);margin-right:8px;vertical-align:1px;box-shadow:0 0 0 3px rgba(111,207,151,.15)}
-  header{position:sticky;top:0;z-index:20;background:rgba(11,18,32,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .25s,background .25s,box-shadow .25s}
-  header.scrolled{background:rgba(11,18,32,.95);border-bottom-color:var(--line);box-shadow:0 10px 30px -18px rgba(0,0,0,.8)}
+  header{position:sticky;top:0;z-index:20;background:#000;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .25s,background .25s,box-shadow .25s}
+  header.scrolled{background:#000;border-bottom-color:var(--line);box-shadow:0 10px 30px -18px rgba(0,0,0,.8)}
   header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:linear-gradient(90deg,transparent,var(--accent) 30%,var(--accent-2) 70%,transparent);opacity:.55}
   nav{display:flex;align-items:center;justify-content:space-between;height:78px;transition:height .25s}
   header.scrolled nav{height:64px}
-  .brand{display:flex;align-items:center;gap:12px}
-  .brand-mark{width:46px;height:46px;flex-shrink:0;display:block}
-  .brand-text{display:flex;flex-direction:column;align-items:center;gap:5px;font-family:'Montserrat',var(--sans);line-height:1}
-  .brand-name{font-weight:800;font-size:22px;letter-spacing:.04em;color:#fff}
-  .brand-sub{display:flex;align-items:center;gap:7px;font-weight:600;font-size:8.5px;letter-spacing:.34em;color:#C9DDF2;white-space:nowrap}
-  .brand-sub::before,.brand-sub::after{content:"";width:14px;height:1.5px;background:#F28C1E}
-  .brand-sub span{padding-left:.34em}
+  .brand{display:flex;align-items:center}
+  .brand-logo{height:58px;width:auto;display:block;transition:height .25s}
+  header.scrolled .brand-logo{height:48px}
   .links{display:flex;gap:6px;font-family:var(--mono);font-size:13px;color:var(--muted)}
   .links a{position:relative;padding:8px 14px;border-radius:6px;transition:color .2s,background .2s}
   .links a:hover{color:var(--text);background:rgba(255,255,255,.03)}
@@ -193,9 +190,7 @@
     .fact dt{padding:10px 16px 4px}
     .fact dd{padding:4px 16px 14px}
     .topbar{display:none}
-    .brand-mark{width:38px;height:38px}
-    .brand-name{font-size:18px}
-    .brand-sub{font-size:7px;letter-spacing:.28em}
+    .brand-logo,header.scrolled .brand-logo{height:38px}
   }
 </style>
 </head>
@@ -218,11 +213,7 @@
   <div class="wrap">
     <nav>
       <a href="#top" class="brand" aria-label="Marisson Aero &amp; Digital, home">
-        <img class="brand-mark" src="img/logo-symbol.svg" alt="" width="46" height="46">
-        <span class="brand-text">
-          <span class="brand-name">MARISSON</span>
-          <span class="brand-sub"><span>AERO &amp; DIGITAL</span></span>
-        </span>
+        <img class="brand-logo" src="img/marisson-logo-white.png" alt="Marisson Aero &amp; Digital" width="232" height="58">
       </a>
       <div class="links">
         <a href="#services">Services</a>
